@@ -1,0 +1,299 @@
+html{
+    box-sizing:border-box;
+    font-size: 10px;
+  }
+
+  *,*::before,*::after{
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+  font-family: 'Noto Serif JP', sans-serif;
+  background-color: #014E62;
+}
+
+.container{
+  width: auto;
+  /* min-width: 1440px; */
+  height: auto;
+
+}
+
+@media (min-width: 1440px) {
+
+}
+
+@media (max-width: 1440px) {
+    /* .container {
+        min-width: 1440px;
+    } */
+}
+
+@media (max-width: 1280px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+
+
+
+
+
+
+a{            /*把a標籤的底線都拿掉，加上自動換行，顏色設定為黑色*/
+  display: block;
+  color: #030303;
+  text-decoration: none;
+}
+
+.navbtn_li{                /*給list型導覽列的li元素，使導覽列橫向排列*/
+  display: flex;
+}
+
+.libtn{                     /*list型導覽列按鈕初始*/
+  list-style: none;
+  text-align: center;
+}
+
+.flexTextCenter{            /*文字垂直中央置中（給盒子）*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex{
+    display: flex;
+}
+
+
+
+/* ↓ 字型設定區/////////////////////////////////////////////////////////////*/
+
+.textH{                 /* header 字型*/
+    padding: 0px;
+    margin: 0px;
+    color: #000000;
+    font-size: 1.4rem;
+    font-family: 'Arial', 'Arial Narrow', sans-serif;
+}
+
+.textN{                 /* nav 字型*/
+    padding: 0px;
+    margin: 0px;
+    color: #222222;
+    font-size: 2.4rem;
+    font-family: 'Arial', 'Arial Narrow', sans-serif;
+    letter-spacing: 1px;
+    height: inherit;
+    line-height: 111px;
+}
+
+.textNp{                 /* sub nav 字型*/
+    padding: 10px;
+    margin: 0px;
+    color: #222222;
+    font-size: 1.4rem;
+    font-family: 'Arial', 'Arial Narrow', sans-serif;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+.textA{                 /* 內文 ABC 級字型都還沒用過可以改*/
+    padding: 0px;
+    margin: 0px;
+    color: #222222;
+    font-size: 3.6rem;
+    font-family: 'Arial', 'Arial Narrow', sans-serif;
+}
+
+.textB{
+    padding: 0px;
+    margin: 0px;
+    color: #222222;
+    font-size: 2.2rem;
+    font-family: 'Arial', 'Arial Narrow', sans-serif;
+}
+
+.textC{
+    padding: 0px;
+    margin: 0px;
+    color: #222222;
+    font-size: 1.6rem;
+    font-family: 'Arial', 'Arial Narrow', sans-serif;
+}
+
+.textF{
+    padding: 0px;
+    margin: 0px;
+    color: #FFFFFF;
+    font-size: 1.4rem;
+    font-family: 'Noto Serif JP','Roboto','Arial', 'Arial Narrow', sans-serif;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+}
+
+.footer_link .textF{
+    letter-spacing: 0.5em;
+}
+
+.footer_contact .textF{
+    letter-spacing: 0.2em;
+}
+
+.footer_copyright .textF{
+    font-family: 'Roboto Condensed', 'Arial Narrow','Arial', sans-serif;
+}
+  
+  
+  /* ↑ 字型設定區/////////////////////////////////////////////////////////////////*/
+
+
+  /* ↓ footer區/////////////////////////////////////////////////////////////////*/
+footer{
+    width: auto;
+    height: auto;
+    min-height: 198px;
+}
+
+.footer_box{
+    margin: 22.5px auto 42.5px;
+    flex-direction: column;
+}
+
+.footer_contact{
+    margin: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.footer_contact img{
+    margin-right: 20px;
+}
+
+.footer_sns{
+    margin-right: 20px;
+}
+
+.footer_snsbox .instagram{
+    margin-right: 0px;
+}
+
+.footer_phone{
+    margin-right: 50px;
+}
+
+.footer_email{
+    margin-right: 50px;
+}
+
+.footer_copyright img{
+    height: 23px;
+    margin-right: 15px;
+}
+
+.footer_box a:hover{
+    opacity: 0.5;
+}
+
+@media (max-width: 716px) {
+    .footer_contact{
+ 
+        justify-content: center
+    }
+    
+    .footer_phone{
+        margin-bottom: 30px;
+    }
+
+    .footer_email{
+        margin-right: 0px;
+        margin-bottom: 30px;
+    }
+
+    .footer_snsbox{
+        margin: 0 50px;
+    }
+}
+
+@media (max-width: 476px){
+    .footer_phone{
+        margin-right: 0px;
+    }
+    .footer_email{
+        margin: 0 50px 30px;
+    }
+}
+
+@media (max-width: 550px){
+    .footer_link{
+        margin: 0 25px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer_link li:nth-last-child(2){
+        display: none;
+    }
+    .footer_link li:nth-last-child(1){
+        margin: 10px 50px 0;
+    }
+}
+
+@media (max-width: 477px){
+    .footer_link li:nth-last-child(2){
+        display:block;
+        margin: 10px 0 0;
+    }
+    .footer_link li:nth-last-child(1){
+        margin: 10px 50px 0 0;
+    }
+
+    .footer_link li:nth-last-child(4){
+        display: none;
+    }
+    .footer_link li:nth-last-child(3){
+        margin: 10px 0 0 50px;
+    }
+}
+
+@media (max-width: 343px){
+    .footer_link li:nth-last-child(2){
+        display: none;
+    }
+    .footer_link li:nth-last-child(1){
+        margin: 10px 50px 0;
+    }
+
+    .footer_link li:nth-last-child(4){
+        display:block;
+        margin: 10px 0 0;
+    }
+    .footer_link li:nth-last-child(3){
+        margin: 10px 30px 0 0;
+    }
+
+    .footer_link li:nth-last-child(6){
+        display: none;
+    }
+    .footer_link li:nth-last-child(5){
+        margin: 10px 0 0 30px;
+    }
+}
+
+@media (max-width: 300px){
+    .footer_link li:nth-child(2n){
+        display: none;
+    }
+
+    .footer_link li:nth-child(2n+1){
+        margin: 15px 50px 0;
+    }
+}
+
+  /* ↑ footer區/////////////////////////////////////////////////////////////////*/
