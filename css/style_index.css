@@ -1,0 +1,16 @@
+.bg{
+    background: url(../img/index_banner.png) center center/cover no-repeat;
+}
+
+.banner_content_box p:nth-child(1){
+    padding-bottom: 20px;
+}
+
+.banner_content_box{
+    margin: 30px;
+}
+
+.banner_content_box .textHp{
+    font-weight: 700;
+    letter-spacing: 0.6em;
+}

@@ -77,31 +77,38 @@ a{            /*把a標籤的底線都拿掉，加上自動換行，顏色設定
 .textH{                 /* header 字型*/
     padding: 0px;
     margin: 0px;
-    color: #000000;
+    color: #FAFBFD;
+    font-size: 7.2rem;
+    font-family: 'Noto Serif JP', 'Arial Narrow', sans-serif;
+    text-align: center;
+    line-height: 1.25em;
+}
+
+.textHp{                 /* sub nav 字型*/
+    padding-bottom: 6.31px;
+    margin: 0px;
+    color: #FAFBFD;
     font-size: 1.4rem;
-    font-family: 'Arial', 'Arial Narrow', sans-serif;
+    font-family: 'Noto Serif JP', 'Arial Narrow', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    text-align: center;
 }
 
 .textN{                 /* nav 字型*/
     padding: 0px;
     margin: 0px;
-    color: #222222;
-    font-size: 2.4rem;
-    font-family: 'Arial', 'Arial Narrow', sans-serif;
-    letter-spacing: 1px;
+    color: #FAFBFD;
+    font-size: 2rem;
+    font-family: 'Noto Serif JP', 'Arial Narrow', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.15em;
     height: inherit;
-    line-height: 111px;
+    align-self: center;
+    /* line-height: 111px; */
 }
 
-.textNp{                 /* sub nav 字型*/
-    padding: 10px;
-    margin: 0px;
-    color: #222222;
-    font-size: 1.4rem;
-    font-family: 'Arial', 'Arial Narrow', sans-serif;
-    line-height: 1.5;
-    letter-spacing: 1px;
-}
+
 
 .textA{                 /* 內文 ABC 級字型都還沒用過可以改*/
     padding: 0px;
@@ -153,11 +160,196 @@ a{            /*把a標籤的底線都拿掉，加上自動換行，顏色設定
   /* ↑ 字型設定區/////////////////////////////////////////////////////////////////*/
 
 
+  /* ↓ banner區/////////////////////////////////////////////////////////////////*/
+
+.bannerbox{
+    width: 100%;
+    height: 100vh;
+    /* height: 100vh;
+    max-height: 100vh; */
+    /* overflow: hidden; */
+    /* position: relative; */
+    z-index: -2;
+}
+
+.bg{
+    z-index: -1;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    bottom: -20px;
+    left: -20px;
+}
+
+.bg_cover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: linear-gradient(180deg, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, 0.5) 100%);
+}
+
+.banner_item_box{
+    width: 100%;
+    height: 70%;
+    align-self: flex-end;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.banner_scroll{
+    flex-direction: column;
+    margin: 30px 0;
+}
+
+/* ↑ banner區/////////////////////////////////////////////////////////////////*/
+
+
+
+/* ↓ nav區////////////////////////////////////////////////////////////////////*/
+
+
+.nav_box{
+    position: fixed;
+    justify-content: center;
+    height: 96px;
+    width: 100%;
+    z-index: 5;
+    top: 0;
+    left: 0;
+}
+
+.nav_link_box{
+    height: 100%;
+}
+
+.nav_link{
+    height: 100%;
+}
+
+.nav_link_btn{
+    margin-right: 35px;
+
+}
+
+.nav_icon img{
+    height: 55px;
+}
+
+.nav_icon{
+    margin-right: 35px;
+}
+
+.nav_link_btn{
+    position: relative;
+    transition: all .3s linear;
+}
+
+.nav_link_btn::before{
+    content: "";
+    width: 0px;
+    height: 1px;
+    display: block;
+    box-sizing: border-box;
+    border-bottom: 3px solid #EB6570;
+    border-radius: 90px;
+    position: absolute;
+    bottom: 25px;
+    right: 46px;
+    transition: all .3s linear;
+}
+
+.nav_link_btn::after{
+    content: "";
+    width: 0px;
+    height: 1px;
+    display: block;
+    box-sizing: border-box;
+    border-bottom: 3px solid #EB6570;
+    border-radius: 90px;
+    position: absolute;
+    bottom: 25px;
+    left: 44px;
+    transition: all .3s linear;
+}
+
+.nav_link_btn:hover::before{
+    width: 44px;
+}
+
+.nav_link_btn:hover::after{
+    width: 44px;
+}
+
+.nav_link_btn img{
+    height: 29px;
+    padding: 3px 0 2px;
+    margin-right: 9px;
+}
+
+.nav_right .nav_link li:last-child{
+    padding: 0 6px;
+    margin-right: 0;
+}
+
+.subNav .nav_box{
+    background-color: #014E62;
+}
+
+.subNav{
+    opacity: 0;
+    pointer-events: none;
+    z-index: 6;
+    /* transition: 0.5s; */
+}
+
+  .navAppear {
+    pointer-events: all;
+	opacity: 1.0;
+  }
+
+@media (min-width: 1150px) {
+    nav{
+        display: block;
+    }
+    .subNav{
+        display: block;
+    }
+}
+
+@media (max-width: 1149px) {
+    nav{
+        display: none;
+    }
+    .subNav{
+        display: none;
+    }
+}
+
+/* ↑ nav區////////////////////////////////////////////////////////////////////*/
+
+
+
+
+article{
+    height: 1000px;
+    width: auto;
+    background-color: #486f79;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    transform: translate3d(0px, 0px, 0px);
+}
+
   /* ↓ footer區/////////////////////////////////////////////////////////////////*/
 footer{
     width: auto;
     height: auto;
     min-height: 198px;
+    background-color: #014E62;
 }
 
 .footer_box{
@@ -199,6 +391,7 @@ footer{
 
 .footer_box a:hover{
     opacity: 0.5;
+    transition: 0.15s;
 }
 
 @media (max-width: 716px) {
