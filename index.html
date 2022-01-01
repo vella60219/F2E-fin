@@ -10,19 +10,117 @@
     <!-- 字型 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&family=Roboto+Condensed&display=swap" rel="stylesheet">
     <!-- css -->
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/style_text.css">
+    <link rel="stylesheet" href="./css/style_index.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <nav></nav>
+    <div class="subNav">
+        <div class="nav_box flex">
+            <div class="nav_left nav_link_box">
+                <ul class="nav_link flex">
+                    <li class="nav_link_btn libtn flexTextCenter">
+                        <a href="" class="textN">最新消息</a>
+                    </li>
+                    <li class="nav_link_btn libtn flexTextCenter">
+                        <a href="" class="textN">品牌故事</a>
+                    </li>
+                    <li class="nav_link_btn libtn flexTextCenter">
+                        <a href="" class="textN">品牌堅持</a>
+                    </li>
+                    <li class="nav_link_btn libtn flexTextCenter">
+                        <a href="" class="textN">飲品總覽</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav_icon flexTextCenter">
+                <a href="./"><img src="./img/logo_color.png" alt="回首頁"></a>
+            </div>
+            <div class="nav_right nav_link_box">
+                <ul class="nav_link flex">
+                    <li class="nav_link_btn libtn flexTextCenter">
+                        <a href="" class="textN">線上商店</a>
+                    </li>
+                    <li class="nav_link_btn libtn flexTextCenter">
+                        <a href="" class="textN">門市資訊</a>
+                    </li>
+                    <li class="nav_link_btn libtn flexTextCenter">
+                        <a href="" class="textN">聯絡我們</a>
+                    </li>
+                    <li class="nav_link_btn libtn flexTextCenter">
+                        <a href="" class="textN flexTextCenter"><img src="./img/nav_language.svg" alt="語言">ＥＮ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container" id="luxy" style="width: 100%; position: fixed; transform: translate3d(0px, 0px, 0px);">
+        <header >
+            <div class="header_box" >
+                <nav>
+                    <div class="nav_box flex">
+                        <div class="nav_left nav_link_box">
+                            <ul class="nav_link flex">
+                                <li class="nav_link_btn libtn flexTextCenter">
+                                    <a href="" class="textN">最新消息</a>
+                                </li>
+                                <li class="nav_link_btn libtn flexTextCenter">
+                                    <a href="" class="textN">品牌故事</a>
+                                </li>
+                                <li class="nav_link_btn libtn flexTextCenter">
+                                    <a href="" class="textN">品牌堅持</a>
+                                </li>
+                                <li class="nav_link_btn libtn flexTextCenter">
+                                    <a href="" class="textN">飲品總覽</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="nav_icon flexTextCenter">
+                            <a href="./"><img src="./img/logo_white.png" alt="回首頁"></a>
+                        </div>
+                        <div class="nav_right nav_link_box">
+                            <ul class="nav_link flex">
+                                <li class="nav_link_btn libtn flexTextCenter">
+                                    <a href="" class="textN">線上商店</a>
+                                </li>
+                                <li class="nav_link_btn libtn flexTextCenter">
+                                    <a href="" class="textN">門市資訊</a>
+                                </li>
+                                <li class="nav_link_btn libtn flexTextCenter">
+                                    <a href="" class="textN">聯絡我們</a>
+                                </li>
+                                <li class="nav_link_btn libtn flexTextCenter">
+                                    <a href="" class="textN flexTextCenter"><img src="./img/nav_language.svg" alt="語言">ＥＮ</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div class="bannerbox luxy-el flex" data-speed-y="7" style="height: 100vh; transform: translate3d(0px, 0px, 0px);">
+                    <div class="banner_item_box">
+                        <!-- <div class="banner_title_box"> -->
+                            <p class="banner_title textH">山</p>
+                            <p class="banner_title textH">焙</p>
+                        <!-- </div> -->
+                        <div class="banner_content_box">
+                            <p class="banner_content textHp">茶自山中，重於焙火</p>
+                            <p class="banner_content textHp">FROM THE MOUNTAIN AND THE SUN</p>
+                        </div>
+                        <a class="banner_scroll flexTextCenter" id="scrolldown" href="javascript:void();">
+                            <p class="textHp">SCROLL</p>
+                            <img src="./img/banner_scroll.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="bg_cover" ></div>
+                    <div class="bg luxy-el" data-speed-y="10" style="height: 110vh; transform: translate3d(0px, 0px, 0px);"></div>
+                </div>
+            </div>
 
         </header>
-        <article></article>
+        <article id="artical"></article>
         <footer>
             <div class="footer_box flexTextCenter">
                 <ul class="footer_link flex">
@@ -62,11 +160,43 @@
                     </div>
                 </div>
                 <div class="footer_copyright flexTextCenter">
-                    <img src="./img/footer_copyright.png" alt="">
+                    <img src="./img/logo_white.png" alt="">
                     <p class="textF">© 2021 SUNBAY TEA BREW</p>
                 </div>
             </div>
         </footer>
     </div>
+
+    <script src="./js/jquery-3.6.0-min.js"></script>
+    <script src="./js/luxy.js"></script>
+    <script src="./js/jquery.scrollTo.js"></script>
+    <script src="./js/TweenMax.min.js"></script>
+    <script charset="utf-8">
+        
+
+        luxy.init({
+            wrapper: '#luxy',
+            targets : '.luxy-el',
+            wrapperSpeed:  0.12
+        });
+
+        $(function() {
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 200)  {          /* 要滑動到選單的距離 */
+                    $('.subNav').addClass('navAppear');   /* 幫選單加上固定效果 */
+                } else {
+                    $('.subNav').removeClass('navAppear'); /* 移除選單固定效果 */
+                }
+            });
+        });
+
+        $(function() {
+        $("#scrolldown").click( function(){
+            $.scrollTo('#artical', {
+                offset: -90, duration: 1000
+            });
+        })
+    });
+    </script>
 </body>
 </html>
