@@ -83,6 +83,7 @@ a{            /*把a標籤的底線都拿掉，加上自動換行，顏色設定
     text-align: center;
     line-height: 1.25em;
     font-weight: 400;
+    text-shadow: 0px 4px 30px rgba(0, 0, 0, 0.6);
 }
 
 .textHp{                 /* sub nav 字型*/
@@ -107,6 +108,7 @@ a{            /*把a標籤的底線都拿掉，加上自動換行，顏色設定
     height: inherit;
     align-self: center;
     /* line-height: 111px; */
+    text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .textBur{                 /* burger 字型*/

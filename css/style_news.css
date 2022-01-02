@@ -1,7 +1,7 @@
 .subNav{
     opacity: 1;
     pointer-events: all;
-    z-index: 6;
+    z-index: 2;
     /* transition: 0.5s; */
 }
 
@@ -20,10 +20,16 @@
     transition: 0;
 }
 
-
 nav{
     height: 96px;
 }
+
+.flexNav{
+    
+    background-color: rgba(1, 78, 98, 1);
+    transition: 0s;
+}
+
 
 article{
     z-index: 1;
