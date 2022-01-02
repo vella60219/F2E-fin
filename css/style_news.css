@@ -1,0 +1,30 @@
+.subNav{
+    opacity: 1;
+    pointer-events: all;
+    z-index: 6;
+    /* transition: 0.5s; */
+}
+
+.subNav .nav_box{
+    background-color: rgba(1, 78, 98, 1);
+    transition: 0;
+}
+
+.subNav img{
+    opacity: 1;
+    transition: 0;
+}
+
+.subNav .textN{
+    opacity: 1;
+    transition: 0;
+}
+
+
+nav{
+    height: 96px;
+}
+
+article{
+    z-index: 1;
+}

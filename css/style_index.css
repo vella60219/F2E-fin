@@ -6,6 +6,10 @@
     background: url(../img/index_banner.png) center center/cover no-repeat;
 }
 
+.banner_item_box{
+    height: 70%;
+}
+
 .banner_content_box p:nth-child(1){
     padding-bottom: 20px;
     font-size: 18px;
