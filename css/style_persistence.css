@@ -1,9 +1,11 @@
 .content{
-    position: relative;
+    /* position: relative; */
     display: block;
+    height: 100%;
     width: 100%;
-    
-    top:100vh;
+    height: auto;
+    margin-top: -10vh;
+    margin-bottom: 15vh;
 }
 /* ↓ 字型設定區/////////////////////////////////////////////////////////////////*/
 .content p{
@@ -12,21 +14,24 @@
     padding: 0px;
     margin: 0px;
 }
-
-.content .textA{           
+.content .textA{        
+    width:auto;   
     font-weight: 700;
-    font-size: 3.7rem;
+    font-size: 3.9rem;
     line-height: 84px;
-    letter-spacing: 0.5em;
-    border: 1px solid red;
+    letter-spacing: 0.4em;
 }
 
 .content .textB{
     font-weight: 100;
     font-size: 1.8rem;
     line-height: 200%;
-    letter-spacing: 0.3em;
-    border: 1px solid red;
+    letter-spacing: 0.4em;
+}
+
+.mark{ 
+    background-size: 200px 60px;
+    background-image: linear-gradient(transparent 50%, #EB6570 50%)
 }
 
 br {
@@ -42,26 +47,198 @@ br {
 }
 
 /* ↑ banner區/////////////////////////////////////////////////////////////////*/
+
+/* ↓ content區/////////////////////////////////////////////////////////////////*/
+
 .content img{
     width: 457px;
     height: 457px;
 }
-.section1{
+.content .section_right{
     position: relative;
-    top: 10vh;
+    top: 30vh;
     padding: 0px;
-    border: solid 1px blue;
+    margin-left: 48vw;
+    margin-right: 10vw;
 }
-.section1{
+.content .section_left{
     position: relative;
-    top: 10vh;
+    top: 30vh;
     padding: 0px;
-    margin-left:15vw;
-    margin-right: 44vw;
-    border: solid 1px blue;
+    margin-left: 18vw;
+    margin-right: 49vw;
 }
 
 .content .pic_right{
-    border: solid 1px blue;
+    margin-top: 20vh;
+    /* margin-right: 20vw; */
     margin-left: 55vw;
 }
+
+.content .pic_left{
+    margin-top: 20vh;
+    /* margin-right: 49vw; */
+    margin-left: 15vw;
+}
+
+
+/* ↑ content區/////////////////////////////////////////////////////////////////*/
+
+
+
+/* ↓ rwd區/////////////////////////////////////////////////////////////////*/
+
+@media (min-width: 1440px) {
+
+}
+
+@media (max-width: 1440px) {
+
+    .content img{
+        width: 380px;
+        height: 380px;
+    }
+    .content .section_right{
+        position: relative;
+        top: 30vh;
+        padding: 0px;
+        margin-left: 48vw;
+        margin-right: 8vw;
+    }
+    .content .section_left{
+        position: relative;
+        top: 30vh;
+        padding: 0px;
+        margin-left: 16vw;
+        margin-right: 44vw;
+    }
+    .content .pic_right{
+        margin-top: 20vh;
+        margin-left: 55vw;
+    }
+
+    .content .pic_left{
+        margin-top: 20vh;
+        margin-left: 10vw;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    .content img{
+        width: 340px;
+        height: 340px;
+    }
+    .content .section_right{
+        position: relative;
+        top: 30vh;
+        padding: 0px;
+        margin-left: 50vw;
+        margin-right: 5vw;
+    }
+    .content .section_left{
+        position: relative;
+        top: 30vh;
+        padding: 0px;
+        margin-left: 10vw;
+        margin-right: 42vw;
+    }
+    .content .pic_right{
+        margin-top: 20vh;
+        margin-left: 51vw;
+    }
+
+    .content .pic_left{
+        margin-top: 20vh;
+        margin-left: 8vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .content .textA{           
+        font-weight: 700;
+        font-size: 3.5rem;
+        line-height: 84px;
+        letter-spacing: 0.5em;
+    }
+    .content .textB{
+        font-weight: 100;
+        font-size: 1.4rem;
+        line-height: 200%;
+        letter-spacing: 0.4em;
+    }
+
+    .content img{
+        width: 300px;
+        height: 300px;
+    }
+    .content .section_right{
+        position: relative;
+        top: 30vh;
+        padding: 0px;
+        margin-left: 50vw;
+        margin-right: 5vw;
+    }
+    .content .section_left{
+        position: relative;
+        top: 30vh;
+        padding: 0px;
+        margin-left: 6vw;
+        margin-right: 45vw;
+    }
+    .content .pic_right{
+        margin-top: 20vh;
+        margin-left: 50vw;
+    }
+
+    .content .pic_left{
+        margin-top: 20vh;
+        margin-left: 8vw;
+    }
+
+}
+@media (max-width: 320px) { 
+    .content .textA{           
+        font-weight: 700;
+        font-size: 3.9rem;
+        line-height: 84px;
+        letter-spacing: 0.5em;
+    }
+    
+    .content .textB{
+        font-weight: 100;
+        font-size: 1.8rem;
+        line-height: 200%;
+        letter-spacing: 0.4em;
+    }
+    .content img{
+        width: 340px;
+        height: 340px;
+    }
+    .content .section_right{
+        position: relative;
+        top: 30vh;
+        padding: 0px;
+        margin-left: 50vw;
+        margin-right: 5vw;
+    }
+    .content .section_left{
+        position: relative;
+        top: 30vh;
+        padding: 0px;
+        margin-left: 10vw;
+        margin-right: 42vw;
+    }
+    .content .pic_right{
+        margin-top: 20vh;
+        margin-left: 51vw;
+    }
+
+    .content .pic_left{
+        margin-top: 20vh;
+        margin-left: 8vw;
+    }
+}
+
+
+/* ↑ rwd區/////////////////////////////////////////////////////////////////*/
