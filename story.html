@@ -17,6 +17,17 @@
     <link rel="stylesheet" href="./css/style_story.css">
 </head>
 <body>
+    <!-- loading spinner -->
+    <div class="spinner" id="loading">
+        <div class="sk-chase">
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+          </div>
+    </div>    
     <div class="subNav">
         <div class="nav_box flex">
             <div class="nav_left nav_link_box">
@@ -307,6 +318,9 @@
     });
 
     $(document).scrollScope();
+    </script>
+    <script> //loading spinner
+        $("#loading").delay(2000).fadeOut(800);
     </script>
 </body>
 </html>
