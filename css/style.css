@@ -155,8 +155,6 @@ a{            /*把a標籤的底線都拿掉，加上自動換行，顏色設定
 .spinner{
     position: fixed;
     background-color: #014E62;
-    /* width: 100%;
-    height: 100%; */
     height  : auto; 
     left: 0%;
     top: 0%;
@@ -708,7 +706,7 @@ a{            /*把a標籤的底線都拿掉，加上自動換行，顏色設定
 /* ↑ burger 區////////////////////////////////////////////////////////////////////*/
 
 article{
-    height: auto;
+    Min-height:1000px;
     width: auto;
     background-color: #014E62;
     overflow: hidden;
