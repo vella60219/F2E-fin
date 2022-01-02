@@ -18,6 +18,7 @@
     font-size: 2.8rem;
     letter-spacing: 0.3em;
     font-weight: 400;
+    text-align: left;
 }
 
 .textC{
@@ -226,12 +227,15 @@
 .recommend_content{
     height: 90%;
     margin-top: 50px;
+    position: relative;
 }
 
 
 .swiper {
   width: 70%;
-  height: 100%;
+  height: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .swiper-slide {
@@ -239,7 +243,7 @@
   /* height: 100%; */
   text-align: center;
   /* font-size: 18px; */
-  background: rgb(59, 59, 59);
+  /* background: rgb(59, 59, 59); */
 
   /* Center slide text vertically */
   display: -webkit-box;
@@ -256,21 +260,44 @@
   align-items: center;
 }
 
-.swiper-wrapper{
-    /* width: 80%; */
+
+
+
+
+
+.swiper-pagination{
+    width: 250px; 
+    height: 25px; 
+    padding-bottom: 3px; 
+    left: calc(100% - 250px); 
+    background: none; 
+    bottom: -50px; 
+    position: absolute; 
+    z-index: 99999999 !important; 
+    display: flex; 
+    align-items: flex-end;
+    justify-content: center;
 }
 
-/* .swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-} */
-
-.swiper {
-  margin-left: auto;
-  margin-right: auto;
+.swiper-pagination span,#swiper01_param .swiper-pagination span{
+    margin: 0 8px !important;
+    display: block;
+    background: #fafbfd;
+    opacity: 1;
+    border-radius: 30%;
+    transform: rotate(45deg);
+    /* border: 0.5px solid #EB6570; */
+    width: 12px;
+    height: 12px;
 }
+.swiper-pagination span.swiper-pagination-bullet-active,#swiper01_param .swiper-pagination span.swiper-pagination-bullet-active{
+    width: 12px;
+    height: 12px;
+    position: relative;
+    /* bottom: -2px; */
+    background: #EB6570;
+}
+
 
 
 
@@ -280,30 +307,44 @@
     justify-content: center;
     align-content: center;
     width: 100%;
-    height: 100%;
+    height: 80%;
 }
 
 .recommend_swiper_img{
     margin: auto 0;
-    height: 384px;
-    width: 384px;
+    height: 90%;
+    /* width: 384px; */
     align-self: flex-start;
 }
 
 .recommend_swiper_content{
-    height: 384px;
-    width: 384px;
+    height: 100%;
+    /* width: 384px; */
     margin: auto 0;
     padding-left: 59px;
-    /* display: flex; */
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: flex-start;
 }
 
 .recommend_swiper_tag{
-    height: 80px;
-    width: auto;
+    width: 142px;
+    margin-bottom: 50px;
+    margin-top: -30px;
+}
+
+.swiper-button-next,.swiper-button-prev{
+    color: rgba(0, 0, 0, 0);
+    width: 100px;
+}
+
+.swiper-button-next:hover path{
+    fill: #EB6570;
+}
+
+.swiper-button-prev:hover path{
+    fill: #EB6570;
 }
 
 
