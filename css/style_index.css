@@ -287,6 +287,7 @@
     margin: auto 0;
     height: 384px;
     width: 384px;
+    align-self: flex-start;
 }
 
 .recommend_swiper_content{
