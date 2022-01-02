@@ -1,3 +1,40 @@
+/* ↓ 自行設定區/////////////////////////////////////////////////////////////////*/
+
+.textA{                 /* 內文 ABC 級字型都還沒用過可以改*/
+    padding: 0px;
+    margin: 0px;
+    color: #222222;
+    font-size: 3.6rem;
+    font-family: 'Arial', 'Arial Narrow', sans-serif;
+}
+
+.textB{
+    padding: 0px;
+    margin: 0px;
+    color: #222222;
+    font-size: 2.2rem;
+    font-family: 'Arial', 'Arial Narrow', sans-serif;
+}
+
+.textC{
+    padding: 0px;
+    margin: 0px;
+    color: #222222;
+    font-size: 1.6rem;
+    font-family: 'Arial', 'Arial Narrow', sans-serif;
+}
+
+.textF{
+    padding: 0px;
+    margin: 0px;
+    color: #FFFFFF;
+    font-size: 1.4rem;
+    font-family: 'Noto Serif JP','Roboto','Arial', 'Arial Narrow', sans-serif;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+}
+/* ↑ 自行設定區/////////////////////////////////////////////////////////////////*/
+
 /* ↓ banner區/////////////////////////////////////////////////////////////////*/
 
 
