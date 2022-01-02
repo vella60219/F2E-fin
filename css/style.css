@@ -634,7 +634,7 @@ a{            /*把a標籤的底線都拿掉，加上自動換行，顏色設定
 /* ↑ burger 區////////////////////////////////////////////////////////////////////*/
 
 article{
-    height: 1000px;
+    height: auto;
     width: auto;
     background-color: #014E62;
     overflow: hidden;

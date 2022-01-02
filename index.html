@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&family=Roboto+Condensed&display=swap" rel="stylesheet">
     <!-- css -->
     <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/style_index.css">
 </head>
@@ -172,9 +173,41 @@
                         <p class="textC">一家以自家茶行的茶葉現磨現沖的飲料店，傳承百年茶行，以現代萃取方式，將泡茶完整呈現於飲品中。</p>
                     </div>
                 </div>
-                <div class="about_movie"></div>
+                <div class="about_movie">
+                    <video src="./vedio/vedio.mp4" id="video" preload autoplay muted loop></video>
+                    <div class="about_movie_control">
+                        <button id="volup" class="volup">ON</button>
+                        <button id="mute" class="mute select">OFF</button>
+                    </div>
+                </div>
             </div>
-
+            <div class="recommend">
+                <div class="recommend_title flexTextCenter">
+                    <p class="textA">推薦飲品</p>
+                </div>
+                <div class="recommend_content">
+                    <div class="swiper mySwiper swiper-initialized swiper-horizontal swiper-pointer-events">
+                        <div class="swiper-wrapper" id="swiper-wrapper-231666c25ba3ef7d" aria-live="polite" style="transition-duration: 0ms; transform: translate3d(-1054px, 0px, 0px);"><div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="8" style="width: 1024px; margin-right: 30px;" role="group" aria-label="9 / 9">Slide 9</div>
+                        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" style="width: 1024px; margin-right: 30px;" role="group" aria-label="1 / 9">
+                            <div class="recommend_swiper_box">
+                                <img class="recommend_swiper_img" src="./img/index_recommend_swiper1.png" alt="">
+                                <div class="recommend_swiper_content">
+                                    <img class="recommend_swiper_tag" src="./img/index_recommend_swiper_tag1.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="1" style="width: 1024px; margin-right: 30px;" role="group" aria-label="2 / 9">Slide 2</div>
+                        <div class="swiper-slide" data-swiper-slide-index="2" style="width: 1024px; margin-right: 30px;" role="group" aria-label="3 / 9">Slide 3</div>
+                        <div class="swiper-slide" data-swiper-slide-index="3" style="width: 1024px; margin-right: 30px;" role="group" aria-label="4 / 9">Slide 4</div>
+                        <div class="swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="8" style="width: 1024px; margin-right: 30px;" role="group" aria-label="9 / 9">Slide 9</div>
+                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" role="group" aria-label="1 / 9" style="width: 1024px; margin-right: 30px;">Slide 1</div></div>
+                        <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-231666c25ba3ef7d"></div>
+                        <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-231666c25ba3ef7d"></div>
+                        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 6"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 7"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 8"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 9"></span></div>
+                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                    </div>
+                </div>
+            </div>
 
         </article>
         <footer>
@@ -228,6 +261,7 @@
     <script src="./js/luxy.js"></script>
     <script src="./js/jquery.scrollTo.js"></script>
     <script src="./js/TweenMax.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>                //讓 svg 圖換色用的
         jQuery('img.svg').each(function(){   
             var $img = jQuery(this);   
@@ -263,6 +297,95 @@
         
         });  
     </script>
+    <script>                //影片切換聲音
+
+        $(function() {
+            $("#volup").on("click", function() {
+                $(this).addClass('select');
+                $("#mute").removeClass('select');
+            });
+            $("#mute").on("click", function() {
+                $(this).addClass('select');
+                $("#volup").removeClass('select');
+            });
+        });
+
+        if (window.matchMedia('screen and (min-width:768px)').matches) {
+        //768px以上のデスクトップでの処理
+        // videoの取得
+        var video = document.getElementById('video');
+        // 自動再生
+        video.autoplay = true;
+        // ループ
+        video.loop = true;
+        $(window)
+            .on('scroll resize', function () {
+                // ウインドウのスクロール量取得
+                var windowScrollTop = $(window).scrollTop();
+                // ウインドウの高さ取得
+                var windowInnerHeight = window.innerHeight;
+
+                var $video = $('video');
+                // videoがページの最上部からどの位置にあるか取得
+                var videoTop = $('video').offset().top;
+                // videoの高さ取得
+                var videoHeight = $('video').innerHeight();
+
+                // videoが停止している、かつvideoが画面内に入ってきた場合、再生処理
+                if ($video[0].paused && (windowScrollTop + windowInnerHeight > videoTop)) {
+                    $video[0].play();
+                }
+
+                // videoが再生中、かつ画面外に出た場合、停止処理
+                if (!$video[0].paused && ((windowScrollTop + windowInnerHeight < videoTop) || (windowScrollTop > videoTop + videoHeight))) {
+                    $video[0].pause();
+                }
+            })
+            .trigger('scroll');
+            
+        // muteボタンを押した時
+        var mute = document.getElementById('mute');
+        mute.addEventListener('click', function () {
+            if(video.muted){
+                video.muted = true;
+            }else{
+                video.muted = true;
+            }
+        });
+        var volup = document.getElementById('volup');
+        volup.addEventListener('click', function () {
+            video.muted = false;
+        });
+        }else{
+                //スクリーンサイズが768pxより小さい時の処理
+
+        // videoの取得
+        var video = document.getElementById('video');
+        // 自動再生
+        video.autoplay = false;
+
+        video.playsinline = true;
+
+        video.controls = true;
+        }
+    </script>
+    <script>                //swiper
+
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    
+    </script>
     <script charset="utf-8">
         
 
@@ -293,14 +416,14 @@
         });
 
         $(function() {
-        $("#scrolldown").click( function(){
-            $.scrollTo('#artical', {
-                offset: -90, duration: 1000
-            });
-        })
-    });
+            $("#scrolldown").click( function(){
+                $.scrollTo('#artical', {
+                    offset: -90, duration: 1000
+                });
+            })
+        });
 
-    $(function () {
+        $(function () {
         const $menuBtn = $(".flexNav_burger_box");
         const $burgerBtn = $(".burger");
 
@@ -326,7 +449,8 @@
         }
     });
 
-    $(document).scrollScope();
+        $(document).scrollScope();
+
     </script>
 </body>
 </html>
