@@ -31,7 +31,7 @@ body{
     } */
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1080px) {
 
 }
 
@@ -82,6 +82,7 @@ a{            /*把a標籤的底線都拿掉，加上自動換行，顏色設定
     font-family: 'Noto Serif JP', 'Arial Narrow', sans-serif;
     text-align: center;
     line-height: 1.25em;
+    font-weight: 400;
 }
 
 .textHp{                 /* sub nav 字型*/
@@ -217,6 +218,23 @@ a{            /*把a標籤的底線都拿掉，加上自動換行，顏色設定
     flex-direction: column;
     margin: 30px 0;
 }
+
+@media (max-width: 768px) {
+
+    .textH{
+        font-size: 5.6rem;
+    }    
+
+}
+
+@media (max-width: 320px) {
+
+    .textH{
+        font-size: 5rem;
+    }    
+
+}
+
 
 /* ↑ banner區/////////////////////////////////////////////////////////////////*/
 
@@ -640,7 +658,7 @@ a{            /*把a標籤的底線都拿掉，加上自動換行，顏色設定
 article{
     height: 1000px;
     width: auto;
-    background-color: #486f79;
+    background-color: #014E62;
     overflow: hidden;
     position: relative;
     z-index: 10;
@@ -664,10 +682,9 @@ footer{
     margin: 30px;
     flex-wrap: wrap;
     justify-content: center;
-
 }
 
-.footer_contact img{
+.footer_phone img , .footer_email img{
     margin-right: 20px;
 }
 
@@ -675,7 +692,7 @@ footer{
     margin-right: 20px;
 }
 
-.footer_snsbox .instagram{
+.footer_snsbox .youtube{
     margin-right: 0px;
 }
 
@@ -697,19 +714,20 @@ footer{
     transition: 0.15s;
 }
 
-@media (max-width: 716px) {
+@media (max-width: 756px) {
     .footer_contact{
- 
-        justify-content: center
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
     
     .footer_phone{
-        margin-bottom: 30px;
+        margin-bottom: 15px;
     }
 
     .footer_email{
         margin-right: 0px;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
     }
 
     .footer_snsbox{
@@ -717,48 +735,50 @@ footer{
     }
 }
 
-@media (max-width: 476px){
-    .footer_phone{
-        margin-right: 0px;
-    }
-    .footer_email{
-        margin: 0 50px 30px;
-    }
-}
+@media (max-width: 700px) {
 
-@media (max-width: 550px){
+    .footer_phone{
+        margin-left: 75px;
+        margin-right: 75px;
+    }
+
+    .footer_email{
+        margin-left: 75px;
+        margin-right: 75px;
+    }
+
     .footer_link{
-        margin: 0 25px;
+        width: 300px;
         flex-wrap: wrap;
         justify-content: center;
+        /* margin: 0 20px; */
     }
 
-    .footer_link li:nth-last-child(2){
-        display: none;
-    }
-    .footer_link li:nth-last-child(1){
-        margin: 10px 50px 0;
-    }
-}
 
-@media (max-width: 477px){
     .footer_link li:nth-last-child(2){
         display:block;
         margin: 10px 0 0;
     }
     .footer_link li:nth-last-child(1){
-        margin: 10px 50px 0 0;
+        margin: 10px 10px 0 0;
     }
 
     .footer_link li:nth-last-child(4){
         display: none;
     }
     .footer_link li:nth-last-child(3){
-        margin: 10px 0 0 50px;
+        margin: 10px 0 0 10px;
     }
+    
 }
 
-@media (max-width: 343px){
+
+
+
+
+
+
+@media (max-width: 319px){
     .footer_link li:nth-last-child(2){
         display: none;
     }
@@ -782,7 +802,7 @@ footer{
     }
 }
 
-@media (max-width: 300px){
+@media (max-width: 230px){
     .footer_link li:nth-child(2n){
         display: none;
     }
