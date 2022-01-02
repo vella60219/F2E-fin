@@ -152,19 +152,19 @@ a{            /*把a標籤的底線都拿掉，加上自動換行，顏色設定
   /* ↑ 字型設定區/////////////////////////////////////////////////////////////////*/
 
   /* ↓ loading spinner區/////////////////////////////////////////////////////////////////*/
-  .spinner{
-      position: fixed;
-      background-color: #014E62;
-      /* width: 100%;
-      height: 100%; */
-      height  : auto; 
-      left: 0%;
-      top: 0%;
-      right: 0%;
-      bottom: 0%;
-      z-index: 9;
-      text-align: center;
-  }
+.spinner{
+    position: fixed;
+    background-color: #014E62;
+    /* width: 100%;
+    height: 100%; */
+    height  : auto; 
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    z-index: 9;
+    text-align: center;
+}
 
   .sk-chase {
     display: block;
