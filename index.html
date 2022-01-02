@@ -17,6 +17,18 @@
     <link rel="stylesheet" href="./css/style_index.css">
 </head>
 <body>
+    <!-- loading spinner -->
+    <div class="spinner" id="loading">
+        <div class="sk-chase">
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+          </div>
+    </div>
+
     <div class="subNav">
         <div class="nav_box flex">
             <div class="nav_left nav_link_box">
@@ -224,6 +236,7 @@
         </footer>
     </div>
 
+
     <script src="./js/jquery-3.6.0-min.js"></script>
     <script src="./js/luxy.js"></script>
     <script src="./js/jquery.scrollTo.js"></script>
@@ -327,6 +340,9 @@
     });
 
     $(document).scrollScope();
+    </script>
+    <script> //loading spinner
+        $("#loading").delay(2000).fadeOut(800);
     </script>
 </body>
 </html>
