@@ -212,7 +212,7 @@
 
 .about_movie_control{
 	position: absolute;
-	right: 50px;
+	right: 125px;
 	bottom: 20px;
 	font-size: 20px;
 }
@@ -280,6 +280,11 @@
 
     .about_movie{
         height: auto;
+    }
+
+    .about_movie_control{
+        right: 50px;
+
     }
 
 }
