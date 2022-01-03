@@ -16,6 +16,14 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/style_index.css">
+    <!-- Firebase App is always required and must be first -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-storage-compat.js"></script>
+
 </head>
 <body>
     <!-- loading spinner -->
@@ -261,7 +269,29 @@
                 </div>
                 </div>
             </div>
-
+            <div class="news">
+                <div class="news_title flexTextCenter">
+                    <p class="textA">最新消息</p>
+                </div>
+                <div class="news_content">
+                    <ul id="news_item_box" class="news_item_box">
+                        <!-- <li class="news_item libtn">
+                            <a href="">
+                                <img class="news_item_img" src="./img/test.png" alt="">
+                                <div class="news_item_cover">
+                                    <p class="news_item_see textNI">SEE MORE</p>
+                                    <p class="news_item_title textNIp">活動快訊活動快訊活動快訊活動快訊活動快訊活動快訊活動快訊活動快訊活動快訊</p>
+                                    <p class="news_item_day textNIp">2022/1/1</p>
+                                </div>
+                            </a>
+                        </li> -->
+                        
+                    </ul>
+                    <div class="more_button_box flexTextCenter">
+                        <a class="more_button textM" href="./news.html">MORE</a>
+                    </div>
+                </div>
+            </div>
         </article>
         <footer>
             <div class="footer_box flexTextCenter">
@@ -316,6 +346,10 @@
     <script src="./js/jquery.scrollTo.js"></script>
     <script src="./js/TweenMax.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script>
+        
+    </script>
     <script>                //讓 svg 圖換色用的
         jQuery('img.svg').each(function(){   
             var $img = jQuery(this);   
@@ -441,7 +475,6 @@
     
     </script>
     <script charset="utf-8">
-        
 
         luxy.init({
             wrapper: '#luxy',
@@ -509,5 +542,6 @@
     <script> //loading spinner
         $("#loading").delay(2000).fadeOut(800);
     </script>
+
 </body>
 </html>

@@ -31,17 +31,45 @@
     font-weight: 400;
 }
 
+.textM{
+    padding: 0px;
+    margin: 0px;
+    color: #fafbfd;
+    font-size: 3rem;
+    letter-spacing: 0.3em;
+    font-weight: 500;
+    text-align: center;
+}
+
+.textNI{
+    padding: 0px;
+    margin: 0px;
+    color: #fafbfd;
+    font-size: 3.2rem;
+    letter-spacing: 0.25em;
+    font-weight: 600;
+    text-align: center;
+}
+
+.textNIp{
+    padding: 0px;
+    margin: 0px;
+    color: #fafbfd;
+    font-size: 1.6rem;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.3em;
+}
 
 @media (max-width: 1080px) {
 
     .textA{                 /* 內文 ABC 級字型都還沒用過可以改*/
         font-size: 3.6rem;
-
     }
     
     .textB{
         font-size: 2.8rem;
-
     }
     
     .textC{
@@ -54,12 +82,10 @@
 
     .textA{                 /* 內文 ABC 級字型都還沒用過可以改*/
         font-size: 3.2rem;
-
     }
     
     .textB{
         font-size: 2.6rem;
-
     }
 
 }
@@ -68,12 +94,10 @@
 
     .textA{                 /* 內文 ABC 級字型都還沒用過可以改*/
         font-size: 2.8rem;
-
     }
     
     .textB{
         font-size: 2.2rem;
-
     }
     
     .textC{
@@ -86,6 +110,70 @@
 
 /* ↑ 字型設定區/////////////////////////////////////////////////////////////////*/
 
+
+
+
+
+
+/* ↓ more 區/////////////////////////////////////////////////////////////////*/
+
+
+
+
+.more_button_box{
+    width: 100%;
+    height: auto;
+}
+
+.more_button{
+    width: auto;
+    height: auto;
+    padding: 10px 5px 10px 13px;
+    display: block;
+    position: relative;
+    transition: all .3s linear;
+}
+
+.more_button::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    box-sizing: border-box;
+    border-top: 1px solid #EB6570;
+    border-left: 1px solid #EB6570;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .3s linear;
+}
+.more_button::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    box-sizing: border-box;
+    border-bottom: 1px solid #EB6570;
+    border-right: 1px solid #EB6570;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: all .3s linear;
+}
+
+.more_button:hover{
+    color: #EB6570;
+    transition: all .3s linear;
+}
+
+.more_button:hover::before,
+.more_button:hover::after{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ↑ more 區/////////////////////////////////////////////////////////////////*/
 
 
 
@@ -534,6 +622,33 @@
 
 }
 
+@media (max-height: 780px){
+    .recommend{
+        height: 120vh;
+        /* max-height: 766px; */
+    }
+} 
+
+@media (max-height: 520px){
+    .recommend{
+        height: 150vh;
+        /* max-height: 766px; */
+    }
+} 
+
+@media (max-height: 450px){
+    .recommend{
+        height: 200vh;
+        /* max-height: 766px; */
+    }
+} 
+
+@media (max-height: 310px){
+    .recommend{
+        height: 250vh;
+        /* max-height: 766px; */
+    }
+} 
 
 @media (max-width: 620px) {
 
@@ -569,8 +684,180 @@
 /* ↑ recommend 推薦飲品 區/////////////////////////////////////////////////////////////////*/
 
 
-/* ↓ 關於山焙 區/////////////////////////////////////////////////////////////////*/
+/* ↓ news 最新消息 區/////////////////////////////////////////////////////////////////*/
+
+.news{
+    margin: 105px auto 105px;
+    height: auto;
+    width: 1060px;
+}
+
+.news_item_box{
+    margin: 80px 0;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.news_item{
+    height: 333px;
+    width: 333px;
+    margin: 40px 0;
+    position: relative;
+}
 
 
 
-/* ↑ 關於山焙 區/////////////////////////////////////////////////////////////////*/
+.news_item_img{
+    width: 100%;
+    border: 4px solid rgba(250, 251, 253, 0.9);
+    transition: 0.75s ease-out;
+}
+
+.news_item_cover{
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    transition: 0.5s ease-out ;
+}
+
+.news_item_see{
+    width: auto;
+    padding: 8px 0px 8px 5px;
+    margin: 10px 30px;
+    border: 4px solid #EB6570;
+}
+
+.news_item_title{
+    padding: 0 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical; 
+}
+
+.news_item_day{
+    margin-top: 10px;
+    margin-bottom: -20px;
+    padding: 0 30px;
+}
+
+.news_item a:hover .news_item_img{
+    border: 4px none rgba(250, 251, 253, 0);
+    transition: 0.75s ease-out;
+}
+
+.news_item a:hover .news_item_cover{
+    opacity: 1;
+    transition: 0.5s ease-out ;
+}
+
+
+
+@media (max-width: 1080px) {
+
+    .news{
+        margin: 80px auto 105px;
+        width: 875px;
+    }
+
+    .news_item{
+        height: 277px;
+        width: 277px;
+        margin: 30px 0;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .news{
+        margin: 80px auto 105px;
+        width: 730px;
+    }
+
+    .news_item_box{
+        margin: 65px 0;
+    }
+
+    .news_item{
+        height: 354px;
+        width: 354px;
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .news{
+        margin: 80px auto 105px;
+        width: 620px;
+    }
+
+    .news_item_box{
+        margin: 65px 0;
+    }
+
+    .news_item{
+        height: 300px;
+        width: 300px;
+    }
+}
+
+@media (max-width: 660px) {
+
+    .news{
+        margin: 80px auto 105px;
+        width: 570px;
+    }
+
+    .news_item_box{
+        margin: 65px 0;
+    }
+
+    .news_item{
+        height: 277px;
+        width: 277px;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .news{
+        margin: 80px auto 105px;
+        width: 100%;
+    }
+
+    .news_item_box{
+        margin: 40px 0;
+        justify-content: center;
+    }
+
+    .news_item_box li:nth-child(5){
+        display: none;
+    }
+    .news_item_box li:nth-child(6){
+        display: none;
+    }
+
+    .news_item{
+        max-height: 300px;
+        max-width: 300px;
+        height: auto;
+        width: auto;
+        margin: 10px ;
+    }
+}
+
+/* ↑ news 最新消息 區/////////////////////////////////////////////////////////////////*/
