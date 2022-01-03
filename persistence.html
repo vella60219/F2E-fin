@@ -10,13 +10,24 @@
     <!-- 字型 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@100;200;400;500;600;700&family=Roboto+Condensed&display=swap" rel="stylesheet">
     <!-- css -->
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/style_persistence.css">
 </head>
 <body>
+    <!-- loading spinner -->
+    <div class="spinner" id="loading">
+        <div class="sk-chase">
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+          </div>
+    </div>
     <div class="subNav">
         <div class="nav_box flex">
             <div class="nav_left nav_link_box">
@@ -151,12 +162,41 @@
                         </a>
                     </div>
                     <div class="bg_cover" ></div>
-                    <div class="bg luxy-el" data-speed-y="10" style="height: 110vh; transform: translate3d(0px, 0px, 0px);"></div>
+                    <div class="bg luxy-el" data-speed-y="9" style="height: 110vh; transform: translate3d(0px, 0px, 0px);"></div>
                 </div>
             </div>
 
         </header>
-        <article id="artical"></article>
+        <!-- 品牌堅持內容 -->
+        <article id="artical">
+            <div class="content">
+                <div class="section1 section_left luxy-el" data-speed-y="5" style=" transform: translate3d(0px, 0px, 0px);">
+                    <p class="textA"><span class="mark">裝罐包裝</span></p><br><p class="textB">以「重茶，茶重」方式發揮出原始茶味於飲品當中。依照重、中、輕，三種茶葉烘焙程度，依序密封在三種不同顏色罐子中，一個小茶罐如同一杯飲料。</p>
+                </div>
+                <img class="pic_right pic_1 luxy-el" data-speed-y="9" style=" transform: translate3d(0px, 0px, 0px);" src="./img/p_pic1.png" alt="裝罐包裝">
+            
+
+                <div class="section2 section_right luxy-el" data-speed-y="5" style=" transform: translate3d(0px, 0px, 0px);">
+                    <p class="textA"><span class="mark">原葉磨碎</span></span></p><br><p class="textB">藉由「霧萃工法」，瞬間磨碎、高溫、高壓萃取，使茶葉精華如迷霧般釋放於茶湯中。</p>
+                </div>
+                <img class="pic_left pic_2 luxy-el" data-speed-y="9" style=" transform: translate3d(0px, 0px, 0px);" src="./img/p_pic2.png" alt="裝罐包裝">
+                
+                <div class="section3 section_left luxy-el" data-speed-y="5" style=" transform: translate3d(0px, 0px, 0px);">
+                    <p class="textA"><span class="mark">機器萃取</span></span></p><br><p class="textB">山焙使用的是特製的萃茶機，而選擇使用機器的初衷是想讓製作一杯飲品就像爺爺泡茶般，讓每個人可以欣賞茶葉沖泡的過程和聞到每支茶的香氣。</p>
+                </div>
+                <img class="pic_right pic_3 luxy-el" data-speed-y="9" style=" transform: translate3d(0px, 0px, 0px);" src="./img/p_pic3.png" alt="裝罐包裝">
+                
+                <div class="section4 section_right luxy-el" data-speed-y="5" style=" transform: translate3d(0px, 0px, 0px);">
+                    <p class="textA"><span class="mark">攪拌雪客</span></span></p><br><p class="textB">輔以高速渦流製作飲品，啜飲間可以在奶油質地般的綿密泡沫中嚐到台灣茶的甘醇。</p>
+                </div>
+                <img class="pic_left pic_4 luxy-el" data-speed-y="9" style=" transform: translate3d(0px, 0px, 0px);" src="./img/p_pic4.png" alt="裝罐包裝">
+                
+                <div class="section5 section_left luxy-el" data-speed-y="5" style=" transform: translate3d(0px, 0px, 0px);">
+                    <p class="textA"><span class="mark">飲品呈現</span></span></p><br><p class="textB">將一杯一杯的茶現泡給客人，親手傳遞每一份溫暖。</p>
+                </div>
+                <img class="pic_right pic_5 luxy-el" data-speed-y="9" style=" transform: translate3d(0px, 0px, 0px);" src="./img/p_pic5.png" alt="裝罐包裝">
+            </div>
+        </article>
         <footer>
             <div class="footer_box flexTextCenter">
                 <ul class="footer_link flex">
@@ -203,11 +243,6 @@
             </div>
         </footer>
     </div>
-
-    <!-- 品牌堅持內容 -->
-    
-
-
 
 
     <script src="./js/jquery-3.6.0-min.js"></script>
@@ -313,6 +348,9 @@
     });
 
     $(document).scrollScope();
+    </script>
+    <script> //loading spinner
+        $("#loading").delay(2000).fadeOut(800);
     </script>
 </body>
 </html>
