@@ -1,59 +1,61 @@
+$(document).ready(function () {
 
-
-
-
-let state = {
-    profile: {
-      name: 'F2E',
-      email: 'f2e@gmail.com',
-      photoURL: 'https://firebasestorage.googleapis.com/v0/b/f2e2018-10e3d.appspot.com/o/users%2Fjsf2e.png?alt=media&token=3e40fcf8-0cef-45f6-a383-35a3e42b73d4'
-    },
-    uploadFile: '',
-    posts: [
-      {
-        _id: '0',
-        title: 'socleansofreshh',
-        image: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/me_3.jpg',
-        date: "2021/1/2",
-        timeStamp: 0000
-      },
-      {
-        _id: '1',
-        title: 'socleansofreshh',
-        image: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/me_3.jpg',
-        date: "2021/1/3",
-        timeStamp: 0001
-      },
-      {
-        _id: '2',
-        title: 'socleansofreshh',
-        image: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/me_3.jpg',
-        date: "2021/1/4",
-        timeStamp: 0002
-      }
-    ]
-  };
-  
-render()
-
-
-function render() {
-    $('#instagram-post').html('');
-    state.posts.forEach(function (post) {
-      let postItem =
-        `<li class="news_item libtn">
-            <a href="">
-                <img class="news_item_img" src="${post.image}" alt="${post.title}">
-                <div class="news_item_cover">
-                    <p class="news_item_see textNI">SEE MORE</p>
-                    <p class="news_item_title textNIp">${post.title}</p>
-                    <p class="news_item_day textNIp">${post.day}</p>
-                </div>
-            </a>
-        </li>
-
-    `;
-      $('#news_item_box').append(postItem);
+    // INITIALIZE FIREBASE
+    firebase.initializeApp({
+        apiKey: "AIzaSyBR79lPr-OVQgUErMrOU7zVlc1lwb8wDp8",
+    authDomain: "f2efin.firebaseapp.com",
+    databaseURL: "https://f2efin-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "f2efin",
+    storageBucket: "f2efin.appspot.com",
+    messagingSenderId: "558738081943",
+    appId: "1:558738081943:web:34d3da260f4c30f46641d2",
+    measurementId: "G-6HTZHK1C4M"
     });
   
-  }
+    // REFERENCE CHATROOM DOCUMENT
+    let db = firebase.firestore()
+      .collection("sunbay")
+      .doc("news");    
+    // REFERENCE CHATROOM MESSAGES
+    let messagesCollectionRef 
+      = db.collection("posts");
+    // QUERY MESSAGES BY TIMESTAMP ORDERING
+    let queryMessagesCollectionRef 
+      = messagesCollectionRef.orderBy("id", "asc");
+  
+    // });
+    let $news_item_box= $('#news_item_box');
+  
+    // A RENDER SCREEN CALLBACK THAT IS TRIGGERED FOR EACH CHAT MESSAGE
+    queryMessagesCollectionRef.onSnapshot(function (querySnapshot) {
+        $news_item_box.html("");
+        //MONITOR CHAT MESSAGE AND RENDER SCREEN
+        querySnapshot.forEach(function (doc) {
+        let image = doc.data().image;
+        let title = doc.data().title;
+        let date = doc.data().date;
+
+        // let count = 0;
+        let count_max = 6;
+        
+        let newsItem = `
+        <li class="news_item libtn">
+                <a href="">
+                    <img class="news_item_img" src="${image}" alt="${title}">
+                    <div class="news_item_cover">
+                        <p class="news_item_see textNI">SEE MORE</p>
+                        <p class="news_item_title textNIp">${title}</p>
+                        <p class="news_item_day textNIp">${date}</p>
+                    </div>
+                </a>
+            </li>
+        `;
+
+        console.log($('#news_item_box').children().length);
+
+        if($('#news_item_box').children().length<count_max){
+            $('#news_item_box').append(newsItem);
+        }
+        });
+    });
+});

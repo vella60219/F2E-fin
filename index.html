@@ -16,6 +16,14 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/style_index.css">
+    <!-- Firebase App is always required and must be first -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-storage-compat.js"></script>
+
 </head>
 <body>
     <!-- loading spinner -->
@@ -464,7 +472,6 @@
     
     </script>
     <script charset="utf-8">
-        
 
         luxy.init({
             wrapper: '#luxy',
@@ -532,5 +539,6 @@
     <script> //loading spinner
         $("#loading").delay(2000).fadeOut(800);
     </script>
+
 </body>
 </html>

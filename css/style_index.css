@@ -223,11 +223,11 @@
 
     .banner_content_box p:nth-child(1){
         padding-bottom: 14px;
-        font-size: 14px;
+        font-size: 14rem;
     }
 
     .banner_content_box p:nth-child(2){
-        font-size: 10px;
+        font-size: 10rem;
     }
 
     .banner_content_box{
@@ -698,13 +698,13 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .news_item{
     height: 333px;
     width: 333px;
-    margin: 40px 0;
+    margin: 40px 10px;
     position: relative;
 }
 
