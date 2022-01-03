@@ -223,11 +223,11 @@
 
     .banner_content_box p:nth-child(1){
         padding-bottom: 14px;
-        font-size: 14rem;
+        font-size: 14px;
     }
 
     .banner_content_box p:nth-child(2){
-        font-size: 10rem;
+        font-size: 10px;
     }
 
     .banner_content_box{
@@ -698,13 +698,13 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
 }
 
 .news_item{
     height: 333px;
     width: 333px;
-    margin: 40px 10px;
+    margin: 40px 0;
     position: relative;
 }
 
@@ -761,6 +761,103 @@
 .news_item a:hover .news_item_cover{
     opacity: 1;
     transition: 0.5s ease-out ;
+}
+
+
+
+@media (max-width: 1080px) {
+
+    .news{
+        margin: 80px auto 105px;
+        width: 875px;
+    }
+
+    .news_item{
+        height: 277px;
+        width: 277px;
+        margin: 30px 0;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .news{
+        margin: 80px auto 105px;
+        width: 730px;
+    }
+
+    .news_item_box{
+        margin: 65px 0;
+    }
+
+    .news_item{
+        height: 354px;
+        width: 354px;
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .news{
+        margin: 80px auto 105px;
+        width: 620px;
+    }
+
+    .news_item_box{
+        margin: 65px 0;
+    }
+
+    .news_item{
+        height: 300px;
+        width: 300px;
+    }
+}
+
+@media (max-width: 660px) {
+
+    .news{
+        margin: 80px auto 105px;
+        width: 570px;
+    }
+
+    .news_item_box{
+        margin: 65px 0;
+    }
+
+    .news_item{
+        height: 277px;
+        width: 277px;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .news{
+        margin: 80px auto 105px;
+        width: 100%;
+    }
+
+    .news_item_box{
+        margin: 40px 0;
+        justify-content: center;
+    }
+
+    .news_item_box li:nth-child(5){
+        display: none;
+    }
+    .news_item_box li:nth-child(6){
+        display: none;
+    }
+
+    .news_item{
+        max-height: 300px;
+        max-width: 300px;
+        height: auto;
+        width: auto;
+        margin: 10px ;
+    }
 }
 
 /* ↑ news 最新消息 區/////////////////////////////////////////////////////////////////*/

@@ -37,7 +37,12 @@ $(document).ready(function () {
 
         // let count = 0;
         let count_max = 6;
-        
+        // if (screen.width<=600) {
+        //     count_max=4;
+            
+        // }else{
+        //     count_max = 6;
+        // }
         let newsItem = `
         <li class="news_item libtn">
                 <a href="">
@@ -52,10 +57,15 @@ $(document).ready(function () {
         `;
 
         console.log($('#news_item_box').children().length);
-
+        
         if($('#news_item_box').children().length<count_max){
             $('#news_item_box').append(newsItem);
         }
         });
+        
     });
+
+    
+
+
 });
