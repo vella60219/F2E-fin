@@ -1,3 +1,45 @@
+.content{
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+    height: auto;
+    margin-top: -10vh;
+    margin-bottom: 1300px;
+}
+/* ↓ 字型設定區/////////////////////////////////////////////////////////////////*/
+.content p{
+    color: #FAFBFD;
+    font-family: 'Noto Serif JP', sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+.content .textA{        
+    width:auto;   
+    font-weight: 700;
+    font-size: 3.9rem;
+    line-height: 84px;
+    letter-spacing: 0.4em;
+}
+
+.content .textB{
+    font-weight: 100;
+    font-size: 1.8rem;
+    line-height: 200%;
+    letter-spacing: 0.4em;
+    text-shadow: 1px 3px 8px #000;
+}
+
+.mark{ 
+    background-size: 200px 60px;
+    background-image: linear-gradient(transparent 50%, #EB6570 50%);
+}
+
+br {
+    content: " ";
+ }
+/* ↑ 自行設定區/////////////////////////////////////////////////////////////////*/
+
 /* ↓ banner區/////////////////////////////////////////////////////////////////*/
 
 
@@ -6,3 +48,351 @@
 }
 
 /* ↑ banner區/////////////////////////////////////////////////////////////////*/
+
+/* ↓ content區/////////////////////////////////////////////////////////////////*/
+
+.content img{
+    width: 457px;
+    height: 457px;
+}
+
+.content .section_right{
+    position: relative;
+    margin-top: 80vh;
+    padding: 0px;
+    margin-left: 48vw;
+    margin-right: 10vw;
+}
+.content .section_left{
+    position: relative;
+    top: 20vh;
+    padding: 0px;
+    margin-left: 18vw;
+    margin-right: 49vw;
+}
+
+.content .pic_right{
+    position: absolute;
+    z-index: -1;
+    margin-top: -5vh;
+    /* margin-right: 20vw; */
+    margin-left: 55vw;
+}
+.content .pic_left{
+    position: absolute;
+    z-index: -1;
+    margin-top: -25vh;
+    /* margin-right: 49vw; */
+    margin-left: 15vw;
+}
+.content .section2{
+    margin-top: 100vh;
+}
+.content .section3,.section5{
+    margin-top: 80vh;
+}
+.content .section4{
+    margin-top: 110vh;
+}
+.content .section5{
+    margin-top: 80vh;
+}
+.content .pic_3{
+    margin-top: -25vh;
+}
+.content .pic_4{
+    margin-top: -45vh;
+}
+.content .pic_5{
+    margin-top: -40vh;
+}
+/* ↑ content區/////////////////////////////////////////////////////////////////*/
+
+
+/* ↓ rwd區/////////////////////////////////////////////////////////////////*/
+
+@media (min-width: 1440px) {
+
+}
+
+@media (max-width: 1440px) {
+    .content{
+        margin-bottom: 1200px;
+    }
+    .content img{
+        width: 390px;
+        height: 390px;
+    }
+    .content .section_right{
+        position: relative;
+        top: 20vh;
+        padding: 0px;
+        margin-left: 48vw;
+        margin-right: 5vw;
+    }
+    .content .section_left{
+        position: relative;
+        top: 30vh;
+        padding: 0px;
+        margin-left: 10vw;
+        margin-right: 44vw;
+    }
+    .content .pic_right{
+        margin-top: 10vh;
+        margin-left: 55vw;
+    }
+    .content .pic_left{
+        margin-top: -8vh;
+        margin-left: 10vw;
+    }
+    .content .section5{
+        margin-top: 90vh;
+    }
+    .content .pic_4{
+        margin-top: -30vh;
+    }
+    .content .pic_5{
+        margin-top: -30vh;
+    }
+    .content .pic_3{
+        margin-top: -10vh;
+    }
+}
+
+@media (max-width: 1024px) {
+    .content{
+        margin-bottom: 1000px;
+    }
+    .content img{
+        width: 340px;
+        height: 340px;
+    }
+    .content .section_right{
+        position: relative;
+        top: -5vh;
+        padding: 0px;
+        margin-left: 48vw;
+        margin-right: 3vw;
+    }
+    .content .section_left{
+        position: relative;
+        top: 20vh;
+        padding: 0px;
+        margin-left: 8vw;
+        margin-right: 40vw;
+    }
+    .content .pic_right{
+        margin-top: -5vh;
+        right: 3vw;
+    }
+    .content .pic_left{
+        margin-top: -25vh;
+        margin-left: 6vw;
+    }
+    .content .section3{
+        margin-top: 70vh;
+    }
+    .content .section4{
+        margin-top: 95vh;
+    }
+    .content .section5{
+        margin-top: 70vh;
+    }
+    .content .pic_4{
+        margin-top: -45vh;
+    }
+    .content .pic_5{
+        margin-top: -35vh;
+    }
+    .content .pic_3{
+        margin-top: -25vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .content .textA{           
+        font-weight: 700;
+        font-size: 3.6rem;
+        line-height: 84px;
+        letter-spacing: 0.5em;
+    }
+    .content .textB{
+        font-weight: 100;
+        font-size: 1.7rem;
+        line-height: 190%;
+        letter-spacing: 0.3em;
+    }
+    .content{
+        margin-bottom: 980px;
+    }
+    .content img{
+        width: 300px;
+        height: 300px;
+    }
+    .content .section_right{
+        position: relative;
+        top: -5vh;
+        padding: 0px;
+        margin-left: 45vw;
+        margin-right: 3vw;
+    }
+    .content .section_left{
+        position: relative;
+        top: 15vh;
+        padding: 0px;
+        margin-left: 8vw;
+        margin-right: 30vw;
+    }
+    .content .pic_right{
+        margin-top: 5vh;
+        right: 3vw;
+    }
+    .content .pic_left{
+        margin-top: -25vh;
+        margin-left: 6vw;
+    }
+    .content .section3{
+        margin-top: 60vh;
+    }
+    .content .section4{
+        margin-top: 95vh;
+    }
+    .content .section5{
+        margin-top: 55vh;
+    }
+    .content .pic_4{
+        margin-top: -45vh;
+    }
+    .content .pic_5{
+        margin-top: -35vh;
+    }
+    .content .pic_3{
+        margin-top: -15vh;
+    }
+}
+
+@media (max-width: 440px) { 
+    .content .textA{           
+        font-weight: 700;
+        font-size: 3.4rem;
+        line-height: 84px;
+        letter-spacing: 0.4em;
+    }
+    .content .textB{
+        font-weight: 100;
+        font-size: 1.5rem;
+        line-height: 190%;
+        letter-spacing: 0.3em;
+    }
+    .content{
+        margin-bottom: 970px;
+    }
+    .content img{
+        width: 280px;
+        height: 280px;
+    }
+    .content .section_right{
+        position: relative;
+        top: -15vh;
+        padding: 0px;
+        margin-left: 38vw;
+        margin-right: 3vw;
+    }
+    .content .section_left{
+        position: relative;
+        top: 18vh;
+        padding: 0px;
+        margin-left: 8vw;
+        margin-right: 25vw;
+    }
+    .content .pic_right{
+        margin-top: 10vh;
+        right: 3vw;
+    }
+    .content .pic_left{
+        margin-top: -28vh;
+        margin-left: 6vw;
+    }
+    .content .section3{
+        margin-top: 50vh;
+    }
+    .content .section4{
+        margin-top: 110vh;
+    }
+    .content .section5{
+        margin-top: 50vh;
+    }
+    .content .pic_4{
+        margin-top: -50vh;
+    }
+    .content .pic_5{
+        margin-top: -28vh;
+    }
+    .content .pic_3{
+        margin-top: -10vh;
+    } 
+}
+@media (max-width: 350px) { 
+    .content .textA{           
+        font-weight: 700;
+        font-size: 3.1rem;
+        line-height: 84px;
+        letter-spacing: 0.8rem;
+    }
+    .content .textB{
+        font-weight: 100;
+        font-size: 1.4rem;
+        line-height: 190%;
+        letter-spacing: 0.3rem;
+    }
+    .content{
+        margin-bottom: 910px;
+    }
+    .content img{
+        width: 240px;
+        height: 240px;
+    }
+    .content .section_right{
+        position: relative;
+        top: -25vh;
+        padding: 0px;
+        margin-left: 38vw;
+        margin-right: 3vw;
+    }
+    .content .section_left{
+        position: relative;
+        top: 15vh;
+        padding: 0px;
+        margin-left: 7vw;
+        margin-right: 25vw;
+    }
+    .content .pic_right{
+        margin-top: 6vh;
+        right: 3vw;
+    }
+    .content .pic_left{
+        margin-top: -37vh;
+        margin-left: 3vw;
+    }
+    .content .section3{
+        margin-top: 30vh;
+    }
+    .content .section4{
+        margin-top: 105vh;
+    }
+    .content .section5{
+        margin-top: 30vh;
+    }
+    .content .pic_4{
+        margin-top: -56vh;
+    }
+    .content .pic_5{
+        margin-top: -25vh;
+    }
+    .content .pic_3{
+        margin-top: -10vh;
+    } 
+}
+
+
+/* ↑ rwd區/////////////////////////////////////////////////////////////////*/
