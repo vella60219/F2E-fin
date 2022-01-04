@@ -91,19 +91,30 @@
 
 }
 
+@media (max-width: 458px){
+
+    .textB{
+        font-size: 2.2rem;
+    }
+
+    .textC{
+        font-size: 1.3rem;
+    }
+
+    .textM{
+        font-size: 2.3rem;
+    }
+
+}
+
+
 @media (max-width: 320px) {
 
     .textA{                 /* 內文 ABC 級字型都還沒用過可以改*/
         font-size: 2.8rem;
     }
     
-    .textB{
-        font-size: 2.2rem;
-    }
     
-    .textC{
-        font-size: 1.3rem;
-    }
 
 }
 
@@ -265,32 +276,36 @@ article{
 @media (max-width: 576px) {
 
     .top_box{
-        width: 542px;
-        height: auto;
-        max-height: initial;
-        flex-wrap: wrap;
-        justify-content: center;
+        width: 433px;
     }
 
     .top_img{
-        margin: 0 auto;
-        width: 542px;
-        height: auto;
-        max-height: 652px;
-    }
-
-    .top_text_box{
-        margin-left: 0px;
-        margin-top: 20px;
-        width: 100%;
-    }
-
-    .top_content{
-        margin-top: 45px;
-        padding: 0 10px;
+        width: 433px;
+        max-height: 521px;
     }
 
 }
+
+@media (max-width: 458px) {
+
+    .top_box{
+        width: 300px;
+    }
+
+    .top_img{
+        width: 300px;
+        max-height: 359px;
+    }
+
+
+
+    .top_content{
+        margin-top: 20px;
+    }
+
+}
+
+
 
 
 
