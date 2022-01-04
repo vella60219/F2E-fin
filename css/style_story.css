@@ -72,7 +72,7 @@ br {
     margin-top: 100vh;
     padding: 0px;
     margin-left: 12vw;
-    margin-right: 42vw;
+    margin-right: 30vw;
 }
 .section_center{
     position: relative;
@@ -86,7 +86,7 @@ br {
 .content .pic_right{
     position: absolute;
     z-index: -1;
-    margin-top: 56vh;
+    margin-top: 60vh;
     /* margin-right: 20vw; */
     margin-left: 55vw;
 }
@@ -150,6 +150,17 @@ br {
     margin-top: -40vh;
     text-align: center;
 }
+
+.section_top p:first-child{
+    line-height: 1.5em;
+}
+
+.small_english{
+    line-height: 1.5em;
+}
+
+
+
 /* ↑ content區/////////////////////////////////////////////////////////////////*/
 
 
@@ -175,10 +186,10 @@ br {
         top: 0vh;
         padding: 0px;
         margin-left: 10vw;
-        margin-right: 44vw;
+        margin-right: 24vw;
     }
     .content .pic_right{
-        margin-top: 60vh;
+        margin-top: 40vh;
         right: 8vw;
     }
     .content .pic_left{
@@ -256,7 +267,7 @@ br {
         top: -10vh;
         padding: 0px;
         margin-left: 7vw;
-        margin-right: 30vw;
+        margin-right: 10vw;
     }
     .content .section_top{
         margin-left: 8vw;
