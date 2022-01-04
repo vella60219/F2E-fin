@@ -10,11 +10,18 @@
     <!-- 字型 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Roboto+Condensed&display=swap" rel="stylesheet">
     <!-- css -->
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/style_news.css">
+        <!-- Firebase App is always required and must be first -->
+        <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+        <!-- Add additional services that you want to use -->
+        <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-storage-compat.js"></script>
+    
 </head>
 <body>
     <!-- loading spinner -->
@@ -109,17 +116,51 @@
     <div class="container" id="luxy" style="width: 100%; position: fixed; transform: translate3d(0px, 0px, 0px);">
         <header >
             <div class="header_box" >
-                <div class="bannerbox flex">
-                    <div class="banner_item_box">
-                        <!-- <div class="banner_title_box"> -->
-                            <p class="banner_title textH">這區給主打新聞</p>
-                        <!-- </div> -->
+                <div class="top_box flex">
+                    <div class="top_img">
+                        <img src="./img/news_top_news.png" alt="">
+                    </div>
+                    <div class="top_text_box">
+                        <p class="textB">【山焙×鮮乳坊】<br>
+                            攜手合作飲品，<br>
+                            快來抽詩籤喝鮮奶茶！</p>
+                        <dis class="top_content">
+                            <p class="textC">以台灣優質鮮奶為主軸的「鮮乳坊」，堅持無成分調整、單一牧場乳源、公平交易的核心理念來販賣鮮乳，這次山焙與「鮮乳坊」特A級鮮乳攜手合作推出三支飲品——</p>
+                            <div class="more_button_box flexTextCenter">
+                                <a class="more_button textM" href=" ">MORE</a>
+                            </div>
+                        </dis>
                     </div>
                 </div>
             </div>
 
         </header>
-        <article id="artical"></article>
+        <article id="artical">
+            <div class="logo_box"><img src="./img/logo_white.png" alt=""></div>
+            <div class="news">
+                <div class="news_title flexTextCenter">
+                    <p class="textA">最新消息</p>
+                </div>
+                <div class="news_content">
+                    <ul id="news_item_box" class="news_item_box">
+                        <!-- <li class="news_item libtn">
+                            <a href="">
+                                <img class="news_item_img" src="./img/test.png" alt="">
+                                <div class="news_item_cover">
+                                    <p class="news_item_see textNI">SEE MORE</p>
+                                    <p class="news_item_title textNIp">活動快訊活動快訊活動快訊活動快訊活動快訊活動快訊活動快訊活動快訊活動快訊</p>
+                                    <p class="news_item_day textNIp">2022/1/1</p>
+                                </div>
+                            </a>
+                        </li> -->
+                        
+                    </ul>
+                    <div class="more_button_box flexTextCenter">
+                        <a class="more_button textM" href=" ">MORE</a>
+                    </div>
+                </div>
+            </div>
+        </article>
         <footer>
             <div class="footer_box flexTextCenter">
                 <ul class="footer_link flex">
@@ -171,6 +212,7 @@
     <script src="./js/luxy.js"></script>
     <script src="./js/jquery.scrollTo.js"></script>
     <script src="./js/TweenMax.min.js"></script>
+    <script src="./js/script.js"></script>
     <script>                //讓 svg 圖換色用的
         jQuery('img.svg').each(function(){   
             var $img = jQuery(this);   
